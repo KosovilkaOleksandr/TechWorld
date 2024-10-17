@@ -6,7 +6,7 @@ function MyPage() {
   return (
     <div>
       <h1>Моя :сторінка:</h1>
-      <p>Вітаю вас!</p>
+      <p>Вітаю вас!!</p>
       <button className="button">Click Me</button>
     </div>
   );
