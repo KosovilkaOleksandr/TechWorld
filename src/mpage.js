@@ -5,7 +5,7 @@ import './css/mpage.css';
 function MyPage() {
   return (
     <div>
-      <h1>Моя сторінка:</h1>
+      <h1>Моя :сторінка:</h1>
       <p>Вітаю вас!</p>
       <button className="button">Click Me</button>
     </div>
