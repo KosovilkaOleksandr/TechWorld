@@ -7,7 +7,7 @@ function MyPage() {
     <div>
       <h1>Моя :сторінка:</h1>
       <p>Вітаю вас!!</p>
-      <button className="button">Click Me</button>
+      <button className="button">Click Mee</button>
     </div>
   );
 }
