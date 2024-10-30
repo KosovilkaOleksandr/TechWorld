@@ -1,0 +1,39 @@
+.submitButton {
+  width: 20%;
+  padding: 12px;
+  background-color: #636ae8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #4850e4;
+  transform: scale(1.05);
+}
+
+.submitButton:active {
+  transform: scale(1);
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.linkButton:hover {
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}

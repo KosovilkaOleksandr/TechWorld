@@ -1,0 +1,27 @@
+.textbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 192px;
+  height: 51px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-family: Alexandria;
+  padding-top: 12px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  background: #ffffffff;
+  border-radius: 6px;
+  border-width: 1px;
+  border-color: #a8adb7ff;
+  border-style: solid;
+  outline: none;
+  text-align: center;
+  margin-top: 5%;
+}
+.textbox:hover {
+  color: #171a1fff;
+  background: #ffffffff;
+  border-color: #9095a1ff;
+}

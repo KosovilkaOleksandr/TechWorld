@@ -1,0 +1,136 @@
+.promoOffersContainer {
+  margin-top: 20px;
+  border-top: 2px solid #ddd;
+  padding-top: 20px;
+}
+
+.promoOffersTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+.promoOffersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.promoOffer {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.promoOffer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.promoOfferImage {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.promoOfferDetails {
+  padding: 15px;
+  background-color: #fff;
+}
+
+.promoOfferDetails h4 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.promoOfferDetails p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.offerExpiration {
+  font-weight: bold;
+  color: #d9534f;
+}
+
+.promoButton {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+.promoButton:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+.categoriesContainer {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.categoriesTitle {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.categoryItem {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.categoryItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.categoryImage {
+  width: 100%;
+  height: auto;
+}
+
+.categoryLabel {
+  padding: 10px;
+  text-align: center;
+  color: #555;
+  font-weight: 600;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 30%;
+}
+
+.pod {
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
