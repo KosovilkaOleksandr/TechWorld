@@ -11,7 +11,7 @@
 }
 
 .container {
-  background-color: #1e1e2f; /* Фон страницы */
+  background-color: #1e1e2f;
   background-image: repeating-linear-gradient(
     45deg,
     #1e1e2f 25%,
@@ -23,22 +23,22 @@
     #282c34 100%
   );
   background-size: 200% 200%;
-  animation: backgroundMovement 10s ease infinite; /* Анимация для контейнера */
+  animation: backgroundMovement 10s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Высота контейнера */
-  margin: 0; /* Убедитесь, что у контейнера нет отступов */
-  font-family: "Alexandria", sans-serif; /* Шрифт */
+  height: 100vh;
+  margin: 0;
+  font-family: "Alexandria", sans-serif;
 }
 
 form {
-  background: #282c34; /* Фон формы */
+  background: #282c34;
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  width: 400px; /* Ширина формы */
-  color: white; /* Цвет текста в форме */
+  width: 400px;
+  color: white;
   text-align: center;
 }
 
@@ -49,63 +49,37 @@ h1 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.textbox {
-  margin-bottom: 20px;
-}
-
-.textbox label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 700;
-  color: #d0d0d0;
-}
-
-.textbox input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #636ae8;
-  background: #f2f2f2;
-  transition: border-color 0.3s;
-  font-size: 16px;
-}
-
-.textbox input:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
 .submitButton {
   width: 100%;
   padding: 12px;
-  background-color: #636ae8; /* Button background color */
-  color: white; /* Button text color */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 16px; /* Font size */
-  cursor: pointer; /* Cursor style */
+  background-color: #636ae8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
   transition:
     background-color 0.3s,
-    transform 0.3s ease; /* Smooth transition for background color and transform */
+    transform 0.3s ease;
 }
 
 .submitButton:hover {
-  background-color: #4850e4; /* Darker color on hover */
-  transform: scale(1.05); /* Slightly increase size on hover */
+  background-color: #4850e4;
+  transform: scale(1.05);
 }
 
 .submitButton:active {
-  transform: scale(1); /* Reset size when clicked */
+  transform: scale(1);
 }
 
-.login-text {
+.logintext {
   margin-top: 15px;
-  font-size: 14px;
-  color: #b0b0b0;
+  font-size: 18px;
+  color: #acabb4;
 }
 
 .login-text a {
-  color: #007bff;
+  color: #3991f0;
   text-decoration: none;
 }
 
@@ -116,17 +90,16 @@ h1 {
 .linkButton {
   background: none;
   border: none;
-  color: #007bff; /* or any color that matches your theme */
+  color: #007bff;
   text-decoration: underline;
   cursor: pointer;
-  padding: 0; /* Remove default padding */
+  padding: 0;
 }
 
 .linkButton:hover {
-  text-decoration: underline; /* Optional: Add some hover effect */
+  text-decoration: underline;
 }
 
-/* Сброс стилей */
 * {
   box-sizing: border-box;
 }

@@ -1,0 +1,9 @@
+.textboxlabel {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: #f6e7fd;
+}
+* {
+  box-sizing: border-box;
+}

@@ -1,41 +1,33 @@
 import React from "react";
-import styles from "./css/mpage.module.css"; // Импортируем стили для логина
+import styles from "./css/mpage.module.css";
+import Button1 from "../components_elem/Button1";
+import Forminp from "../components_elem/Forminp";
+import Label1 from "../components_elem/Label1";
 
 function Log() {
   return (
     <div className={styles.container}>
-      {/* Контейнер с фоном */}
       <form className={styles.form}>
-        {/* Применяем стиль формы */}
         <h1>Login</h1>
-        <p>Welcome back! Please log in to your account.</p>
-        <div className={styles.textbox}>
-          <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Enter your username"
-            required
-          />
-        </div>
-        <div className={styles.textbox}>
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Enter your password"
-            required
-          />
-        </div>
-        <button type="submit" className={styles.submitButton}>
-          {" "}
-          {/* Применяем стиль к кнопке */}
-          Login
-        </button>
+        <p className={styles.logintext}>
+          Welcome back! Please log in to your account.
+        </p>
+        <Label1 text={"Email"} />
+        <Forminp placeholder={"Email"} type={"text"}></Forminp>
+        <Label1 text={"Password"} />
+        <Forminp placeholder={"Password"} type={"password"}></Forminp>
+        <Button1>Login</Button1>
         <p className={styles.loginText}>
-          Don't have an account? <a href="/">Register</a>
+          Don't have an account?{" "}
+          <a href="/" className={styles.linkButton}>
+            Register
+          </a>
+        </p>
+        <p className={styles.loginText}>
+          Back to{" "}
+          <a href="/main_page" className={styles.linkButton}>
+            Main Screen
+          </a>
         </p>
       </form>
     </div>
