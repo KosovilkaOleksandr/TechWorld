@@ -8,17 +8,17 @@ export const loginUser = async (login, password) => {
       login,
       password
     );
-    console.log("Користувач увійшов:", userCredential.user);
+    console.log("User Entered:", userCredential.user);
   } catch (error) {
-    console.error("Помилка входу:", error.message);
+    console.error("Invalid information:", error.message);
   }
 };
 
 export const logoutUser = async () => {
   try {
     await signOut(auth);
-    console.log("Користувач вийшов з акаунту");
+    console.log("User exit from account");
   } catch (error) {
-    console.error("Помилка при виході з акаунту:", error.message);
+    console.error("Problems with entering invalid information:", error.message);
   }
 };
