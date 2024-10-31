@@ -1,0 +1,105 @@
+@keyframes backgroundMovement {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.container {
+  background-color: #1e1e2f;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #1e1e2f 25%,
+    #282c34 25%,
+    #282c34 50%,
+    #1e1e2f 50%,
+    #1e1e2f 75%,
+    #282c34 75%,
+    #282c34 100%
+  );
+  background-size: 200% 200%;
+  animation: backgroundMovement 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Alexandria", sans-serif;
+}
+
+form {
+  background: #282c34;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #636ae8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.submitButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #636ae8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #4850e4;
+  transform: scale(1.05);
+}
+
+.submitButton:active {
+  transform: scale(1);
+}
+
+.logintext {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #acabb4;
+}
+
+.login-text a {
+  color: #3991f0;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.linkButton:hover {
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}

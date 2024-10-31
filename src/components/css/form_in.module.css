@@ -1,0 +1,24 @@
+.textbox {
+  margin-bottom: 20px;
+}
+
+.textboxinput {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #636ae8;
+  background: #f2f2f2;
+  transition: border-color 0.3s;
+  font-size: 16px;
+  margin-bottom: 20px;
+  align-items: left;
+}
+
+.textbox input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.inputchan {
+  justify-content: center;
+}

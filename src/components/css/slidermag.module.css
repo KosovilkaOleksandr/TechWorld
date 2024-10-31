@@ -1,0 +1,122 @@
+.section {
+  display: flex;
+  background-color: rgb(67, 0, 121);
+  height: 100%;
+}
+
+.section > div {
+  flex: 1;
+  padding: 100px;
+  color: white;
+}
+
+.sectionAut > div {
+  flex: 1;
+  padding: 30px;
+  color: white;
+  margin-top: -80px;
+}
+
+.leftPane {
+  background-color: #9f9eaa;
+}
+
+.rightPane {
+  background-color: #878588;
+}
+
+.salesContainer {
+  background-color: #656369;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+.AutorisationContainer {
+  background-color: #656369;
+  padding-top: 40px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+.salesTitle {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.salesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.salesItem {
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.categoriesContainer {
+  background-color: #656369;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+}
+
+.categoriesTitle {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.categoriesGrid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.categoryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  width: 100px;
+}
+
+.categoryImage {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.viewedGoodsTitle {
+  background-color: #333;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.viewedGoodsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.goodsItem {
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  border-radius: 5px;
+}
