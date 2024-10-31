@@ -1,6 +1,6 @@
 // src/MyPage.js
-import React from 'react';
-import './css/mpage.css';
+import React from "react";
+import "./css/mpage.css";
 
 function MyPage() {
   return (
