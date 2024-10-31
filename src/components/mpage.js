@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./css/mpage.module.css";
 import Button1 from "../components_elem/Button1";
 import Forminp from "../components_elem/Forminp";
-//test
+//testing
 function MyPage() {
   return (
     <div className={styles.container}>
