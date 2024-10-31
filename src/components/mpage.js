@@ -1,4 +1,3 @@
-// MyPage.js
 import React, { useState } from "react";
 import styles from "./css/mpage.module.css";
 import Button1 from "../components_elem/Button1";
