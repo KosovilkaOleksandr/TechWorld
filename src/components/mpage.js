@@ -23,7 +23,7 @@ function MyPage() {
             className={styles.linkButton}
             onClick={() => alert("Privacy Policy clicked!")}
           >
-            Privacy Policy
+            Privacy Police
           </button>
           .
         </p>
