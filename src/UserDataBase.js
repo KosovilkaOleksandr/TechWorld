@@ -1,13 +1,12 @@
-import { db } from "./firebase";
+import { db } from "./firebase.js";
 import { collection, addDoc, doc, setDoc, getDoc } from "firebase/firestore";
 
 export const addUserToDatabase = async (uid, name, surname, email) => {
   try {
     await addDoc(collection(db, "users"), {
-      uid,
-      email,
       name,
       surname,
+      email,
       createdAt: new Date().toISOString(),
     });
     console.log("Дані користувача збережено у Firestore з id:", uid);

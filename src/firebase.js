@@ -4,12 +4,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDeP3YPd6A8ItsobjaCGGwAVlpLRIhfoDc",
-  authDomain: "techworld-8caa5.firebaseapp.com",
-  projectId: "techworld-8caa5",
-  storageBucket: "techworld-8caa5.appspot.com",
-  messagingSenderId: "823830137191",
-  appId: "1:823830137191:web:9d2e010d92b8a6464f47c2",
+  apiKey: "AIzaSyBXPLxmP8ZC4ZvunCG0STLDtCJUTSIovJM",
+  authDomain: "techuniverse-6a104.firebaseapp.com",
+  projectId: "techuniverse-6a104",
+  storageBucket: "techuniverse-6a104.firebasestorage.app",
+  messagingSenderId: "165496592204",
+  appId: "1:165496592204:web:2d2b0da0d8f610f984e1e9",
 };
 
 const app = initializeApp(firebaseConfig);
