@@ -1,0 +1,29 @@
+.input {
+  width: 40%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #a8adb7;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Alexandria, sans-serif;
+  color: #171a1f;
+  background-color: #f9fafb;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.input:hover {
+  border-color: #636ae8;
+}
+
+.input:focus {
+  border-color: #636ae8;
+  box-shadow: 0 0 8px rgba(99, 106, 232, 0.2);
+}
+
+.input::placeholder {
+  color: #a8adb7;
+  font-style: italic;
+}
