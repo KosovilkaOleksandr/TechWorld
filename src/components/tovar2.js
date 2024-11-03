@@ -20,7 +20,7 @@ import productIcon from "../assets/images/product.png";
 import gpuIcon from "../assets/images/gpu.png";
 import { useAuth } from "../AuthUser";
 
-function Tovar() {
+function Tovar2() {
   const { id } = useParams();
   const [isOpen, setIsOpen] = useState(false);
   const [productData, setProductData] = useState(null);
@@ -29,7 +29,7 @@ function Tovar() {
   useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const docRef = doc(db, "cards", id);
+        const docRef = doc(db, "proc", id);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
           setProductData(docSnap.data());
@@ -172,13 +172,13 @@ function Tovar() {
               <li>
                 <img src={producer} alt="Vendor" className={sty.charIcon} />
                 <span className={sty.charDescription}>
-                  Vendor: {productData.vendor}
+                  Cores: {productData.cores}
                 </span>
               </li>
               <li>
                 <img src={color} alt="Color" className={sty.charIcon} />
                 <span className={sty.charDescription}>
-                  Gabarites: {productData.gabarites}
+                  Socket: {productData.socket}
                 </span>
               </li>
               <li>
@@ -188,25 +188,25 @@ function Tovar() {
                   className={sty.charIcon}
                 />
                 <span className={sty.charDescription}>
-                  Energy Efficiency: {productData.energy}
+                  mhz: {productData.mhz}
                 </span>
               </li>
               <li>
                 <img src={memory} alt="Memory" className={sty.charIcon} />
                 <span className={sty.charDescription}>
-                  Memory: {productData.memory}
+                  TDP: {productData.TDP}
                 </span>
               </li>
               <li>
                 <img src={proc} alt="Processor" className={sty.charIcon} />
                 <span className={sty.charDescription}>
-                  Frequency: {productData.mhz}
+                  L3 cash: {productData.L3}
                 </span>
               </li>
               <li>
                 <img src={gpuIcon} alt="GPU" className={sty.charIcon} />
                 <span className={sty.charDescription}>
-                  GPU Vendor: {productData.gpu}
+                  Integrated GPU: {productData.gpu}
                 </span>
               </li>
             </ul>
@@ -234,4 +234,4 @@ function Tovar() {
   );
 }
 
-export default Tovar;
+export default Tovar2;

@@ -3,15 +3,16 @@ import { collection, addDoc, doc, setDoc, getDoc } from "firebase/firestore";
 
 export const addUserToDatabase = async (uid, name, surname, email) => {
   try {
-    await addDoc(collection(db, "users"), {
+    const userDocRef = doc(db, "users", uid);
+    await setDoc(userDocRef, {
       name,
       surname,
       email,
       createdAt: new Date().toISOString(),
     });
-    console.log("Дані користувача збережено у Firestore з id:", uid);
+    console.log("Saved in Firestore with id:", uid);
   } catch (error) {
-    console.error("Помилка збереження даних:", error.message);
+    console.error("Saving error:", error.message);
   }
 };
 
@@ -23,11 +24,11 @@ export const getUserFromDatabase = async (uid) => {
     if (userDoc.exists()) {
       return userDoc.data();
     } else {
-      console.log("Документ користувача не знайдено");
+      console.log("Document of user dont found");
       return null;
     }
   } catch (error) {
-    console.error("Помилка при отриманні даних користувача:", error.message);
+    console.error("Error can`t receive user document", error.message);
     return null;
   }
 };

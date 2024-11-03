@@ -7,6 +7,9 @@ const Formchan = (props) => {
       className={styles.input}
       placeholder={props.placeholder}
       type={props.type}
+      value={props.value}
+      onChange={props.onChange}
+      text={props.text}
     ></input>
   );
 };

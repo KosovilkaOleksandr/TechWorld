@@ -7,7 +7,6 @@ p {
   color: gray;
 }
 
-/* Button */
 .button {
   position: absolute;
   top: 783px;
@@ -32,19 +31,16 @@ p {
     0px 0px 2px #636ae8;
 }
 
-/* Hover */
 .button:hover {
   color: #ffffffff;
   background: #4850e4ff;
 }
 
-/* Pressed */
 .button:hover:active {
   color: #ffffffff;
   background: #2c35e0ff;
 }
 
-/* Disabled */
 .button:disabled {
   opacity: 0.4;
 }

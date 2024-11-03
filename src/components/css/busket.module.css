@@ -1,0 +1,118 @@
+.pageBackground {
+  background-color: #f2f2f2;
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cart {
+  max-width: 600px;
+  width: 100%;
+  padding: 25px;
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cartTitle {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+.cartItem:hover {
+  background-color: #f0f0f0;
+}
+
+.cartItemImage {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.cartItemDetails {
+  flex-grow: 1;
+}
+
+.cartItemName {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.cartItemPrice {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.cartItemQuantity {
+  width: 60px;
+  margin-left: 8px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fefefe;
+  color: #333;
+}
+
+.cartItemTotal {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.removeButton {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.removeButton:hover {
+  background-color: #ff2d2d;
+}
+
+.orderButton {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.orderButton:hover {
+  background-color: #45a049;
+}
