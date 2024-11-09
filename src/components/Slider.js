@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import "./css/Slider.module.css";
 
-const images = [
-  "https://via.placeholder.com/600x300?text=Image+1",
-  "https://via.placeholder.com/600x300?text=Image+2",
-  "https://via.placeholder.com/600x300?text=Image+3",
-];
-
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 

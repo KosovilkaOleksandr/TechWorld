@@ -20,7 +20,7 @@ import productIcon from "../assets/images/product.png";
 import gpuIcon from "../assets/images/gpu.png";
 import { useAuth } from "../AuthUser";
 
-function Tovar() {
+function Tovar1() {
   const { id } = useParams();
   const [isOpen, setIsOpen] = useState(false);
   const [productData, setProductData] = useState(null);
@@ -29,7 +29,7 @@ function Tovar() {
   useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const docRef = doc(db, "cards", id);
+        const docRef = doc(db, "laptops", id);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
           setProductData(docSnap.data());
@@ -178,7 +178,7 @@ function Tovar() {
               <li>
                 <img src={color} alt="Color" className={sty.charIcon} />
                 <span className={sty.charDescription}>
-                  Gabarites: {productData.gabarites}
+                  Gabarites: {productData.weight}
                 </span>
               </li>
               <li>
@@ -188,7 +188,7 @@ function Tovar() {
                   className={sty.charIcon}
                 />
                 <span className={sty.charDescription}>
-                  Energy Efficiency: {productData.energy}
+                  Storage: {productData.storage}
                 </span>
               </li>
               <li>
@@ -200,7 +200,7 @@ function Tovar() {
               <li>
                 <img src={proc} alt="Processor" className={sty.charIcon} />
                 <span className={sty.charDescription}>
-                  Frequency: {productData.mhz}
+                  Frequency: {productData.processor}
                 </span>
               </li>
               <li>
@@ -234,4 +234,4 @@ function Tovar() {
   );
 }
 
-export default Tovar;
+export default Tovar1;

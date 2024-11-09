@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styles from "../components/css/sl.module.css";
 import image1 from "../assets/images/sl1.jpg";
 import image2 from "../assets/images/sl2.jpg";
-import image3 from "../assets/images/cables.jpg";
-import image4 from "../assets/images/headphones.jpg";
-import image5 from "../assets/images/smartphones.jpg";
+import image3 from "../assets/images/sl3.jpg";
+import image4 from "../assets/images/sl4.jpg";
+import image5 from "../assets/images/sl5.jpg";
 
 const images = [image1, image2, image3, image4, image5];
 

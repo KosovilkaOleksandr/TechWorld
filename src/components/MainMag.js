@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import slide from "./css/slidermag.module.css";
 import notebookImg from "../assets/images/notebook.jpg";
 import cpuint from "../assets/images/cpu.jpg";
-import cable from "../assets/images/cables.jpg";
+import cable from "../assets/images/gpu.png";
 import headphone from "../assets/images/headphones.jpg";
 import smartphone from "../assets/images/smartphones.jpg";
 import Label from "../components_elem/Label2";
@@ -22,18 +22,15 @@ import categoriesStyles from "./css/categories.module.css";
 import promoImage1 from "../assets/images/promo1.jpg";
 import promoImage2 from "../assets/images/promo2.jpg";
 import act from "../assets/images/act.jpg";
+import Computers from "../components_elem/computers";
+import Processors from "../components_elem/processors";
+import HeadPhones from "../components_elem/headphones";
+import SmartPhone from "../components_elem/smartphones";
+import GPU from "../components_elem/GPU";
 
 function Magazine() {
   const [isOpen, setIsOpen] = useState(false);
-  const [sortType, setSortType] = useState("name");
-
-  const salesItems = [
-    { id: 1, name: "Notebook", image: notebookImg, price: 999 },
-    { id: 2, name: "Processor", image: cpuint, price: 299 },
-    { id: 3, name: "Cables", image: cable, price: 19.99 },
-    { id: 4, name: "Headphones", image: headphone, price: 49.99 },
-    { id: 5, name: "Smartphone", image: smartphone, price: 699 },
-  ];
+  const [selectedType, setSelectedType] = useState("computers");
 
   const handleMenuClick = () => setIsOpen(!isOpen);
   const handleBusketClick = () => alert("Busket button clicked");
@@ -43,14 +40,22 @@ function Magazine() {
   const handleGoodsClick = () => alert("Goods are opening...");
   const handleButtonClick = () => (window.location.href = "/");
 
-  const sortedSalesItems = [...salesItems].sort((a, b) => {
-    if (sortType === "name") {
-      return a.name.localeCompare(b.name);
-    } else if (sortType === "price") {
-      return a.price - b.price;
+  const renderSelectedComponent = () => {
+    switch (selectedType) {
+      case "computers":
+        return <Computers />;
+      case "processors":
+        return <Processors />;
+      case "headphones":
+        return <HeadPhones />;
+      case "smartphones":
+        return <SmartPhone />;
+      case "GPU":
+        return <GPU />;
+      default:
+        return null;
     }
-    return 0;
-  });
+  };
 
   return (
     <div className={slide.container}>
@@ -60,7 +65,7 @@ function Magazine() {
         </button>
         <img src={icons1} alt="Logo" className={styles.logo} />
         <Link
-          to="/"
+          to="/main_page/busket"
           onClick={handleBusketClick}
           className={styles.buttonheader1}
         >
@@ -74,22 +79,28 @@ function Magazine() {
           <img src={icons3} alt="Settings" className={styles.buttonIcon2} />
         </Link>
         <Link
-          to="/"
+          to="/main_page/profile"
           onClick={handleProfileClick}
           className={styles.buttonheader3}
         >
           <img src={icons4} alt="Profile" className={styles.buttonIcon3} />
         </Link>
-        <button onClick={handleGoodsClick} className={styles.buttonheader4}>
+        <Link
+          to="/main_page/"
+          onClick={handleGoodsClick}
+          className={styles.buttonheader4}
+        >
           <img src={icons5} alt="Goods" className={styles.buttonIcon4} />
-        </button>
+        </Link>
       </header>
 
       {isOpen && (
         <div className={styles.dropdown}>
           <ul>
             <li onClick={handleBusketClick}>
-              <img src={icons2} alt="Basket Icon" /> Busket
+              <Link to="/main_page/busket">
+                <img src={icons2} alt="Basket Icon" /> Busket
+              </Link>
             </li>
             <li onClick={handleSettingsClick}>
               <img src={icons3} alt="Settings Icon" /> Settings
@@ -99,10 +110,14 @@ function Magazine() {
               className={styles.buttonheader3}
             ></button>
             <li onClick={handleProfileClick}>
-              <img src={icons4} alt="Profile Icon" /> Profile
+              <Link to="/main_page/profile">
+                <img src={icons4} alt="Profile Icon" /> Profile
+              </Link>
             </li>
             <li onClick={handleGoodsClick}>
-              <img src={icons5} alt="Goods Icon" /> Goods
+              <Link to="/main_page">
+                <img src={icons5} alt="Goods Icon" /> Goods
+              </Link>
             </li>
           </ul>
         </div>
@@ -112,52 +127,12 @@ function Magazine() {
         <div className={slide.leftPane}>
           <div className={slide.sectionAut}>
             <div className={slide.AutorisationContainer}>
-              <Label text={"Fast Autorisation"} />
-              <Inp placeholder="Email" type="text" />
-              <Inp placeholder="Password" type="password" />
-              <Button1 onClick={handleButtonClick}>Log in</Button1>
+              <Label text="PRODUCTION SECTION"></Label>
             </div>
           </div>
 
           <div className={salesStyles.salesContainer}>
-            <div className={salesStyles.salesTitle}>SALES</div>
-            <div className={salesStyles.sortButtonsContainer}>
-              <button
-                className={salesStyles.sortButton}
-                onClick={() => setSortType("name")}
-              >
-                Sort by Name
-              </button>
-              <button
-                className={salesStyles.sortButton}
-                onClick={() => setSortType("price")}
-              >
-                Sort by Price
-              </button>
-            </div>
-            <div className={salesStyles.salesGrid}>
-              {sortedSalesItems.map((item) => (
-                <div key={item.id} className={salesStyles.salesItem}>
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className={salesStyles.salesItemImage}
-                  />
-                  <div className={salesStyles.salesItemDetails}>
-                    <h3>{item.name}</h3>
-                    <p style={{ color: "#000", fontWeight: "bold" }}>
-                      ${item.price.toFixed(2)}
-                    </p>
-                    <button
-                      className={salesStyles.salesButton}
-                      onClick={() => alert(`${item.name} added to busket!`)}
-                    >
-                      Add to Busket
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <div>{renderSelectedComponent()}</div>
           </div>
         </div>
         <div className={slide.rightPane}>
@@ -193,7 +168,7 @@ function Magazine() {
                       Discount end in 5 days!
                     </p>
                     <button className={categoriesStyles.promoButton}>
-                      See More
+                      <Link>See More</Link>
                     </button>
                   </div>
                 </div>
@@ -210,7 +185,7 @@ function Magazine() {
                       Hurry up, offer is limited!
                     </p>
                     <button className={categoriesStyles.promoButton}>
-                      See More
+                      <Link to="/main_page/promo">See More</Link>
                     </button>
                   </div>
                 </div>
@@ -218,7 +193,10 @@ function Magazine() {
             </div>
 
             <div className={categoriesStyles.categoriesGrid}>
-              <div className={categoriesStyles.categoryItem}>
+              <div
+                className={categoriesStyles.categoryItem}
+                onClick={() => setSelectedType("computers")}
+              >
                 <img
                   src={notebookImg}
                   alt="Notebooks"
@@ -226,7 +204,10 @@ function Magazine() {
                 />
                 <h1 className={categoriesStyles.pod}>Discounted Laptops</h1>
               </div>
-              <div className={categoriesStyles.categoryItem}>
+              <div
+                className={categoriesStyles.categoryItem}
+                onClick={() => setSelectedType("processors")}
+              >
                 <img
                   src={cpuint}
                   alt="CPU"
@@ -234,15 +215,21 @@ function Magazine() {
                 />
                 <h1 className={categoriesStyles.pod}>Processors</h1>
               </div>
-              <div className={categoriesStyles.categoryItem}>
+              <div
+                className={categoriesStyles.categoryItem}
+                onClick={() => setSelectedType("GPU")}
+              >
                 <img
                   src={cable}
                   alt="Cables"
                   className={categoriesStyles.categoryImage}
                 />
-                <h1 className={categoriesStyles.pod}>Cables on Sales</h1>
+                <h1 className={categoriesStyles.pod}> GPU on Sales</h1>
               </div>
-              <div className={categoriesStyles.categoryItem}>
+              <div
+                className={categoriesStyles.categoryItem}
+                onClick={() => setSelectedType("headphones")}
+              >
                 <img
                   src={headphone}
                   alt="Headphones"
@@ -250,7 +237,10 @@ function Magazine() {
                 />
                 <h1 className={categoriesStyles.pod}>Headphones on sale</h1>
               </div>
-              <div className={categoriesStyles.categoryItem}>
+              <div
+                className={categoriesStyles.categoryItem}
+                onClick={() => setSelectedType("smartphones")}
+              >
                 <img
                   src={smartphone}
                   alt="Smartphones"
